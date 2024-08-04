@@ -9,7 +9,7 @@ const RestraurantCard = (props) => {
 
   return (
     <Link to={"restaurant/" + props.resData.info.id}>
-      <div className="p-2 res-card m-4 bg-slate-200 text-blue w-64 rounded-md hover:bg-white hover:text-blue-950 transition ease-out hover:shadow-md">
+      <div data-testid="cards" className="p-2 res-card m-4 bg-slate-200 text-blue w-64 rounded-md hover:bg-white hover:text-blue-950 transition ease-out hover:shadow-md">
         <div className="res-img ">
           <img
             className="res-logo w-full object-cover rounded-t-md"

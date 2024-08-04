@@ -32,7 +32,7 @@ const Body = () => {
     setRestroList(
       data.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
-    console.log(listOfRestaurant);
+    // console.log(listOfRestaurant);
     // console.log(data.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     // console.log(listOfRestaurant);
 
@@ -68,6 +68,7 @@ const Body = () => {
         <input
           className="p-4 mx-4 rounded-xl border-2 border-blue-950"
           type="text"
+          data-testid="searchBox"
           value={searchText}
           onChange={(e) => {
             setSearchText(e.target.value);
