@@ -1,0 +1,72 @@
+There are two types of export 
+1. default
+2. named
+
+Can we do both export together (export default data and export const data  = [])
+
+
+React Hooks
+
+-- Whenever a state variable updates react re-render our component.
+-- 1:44
+
+Reconciliation (React Fiber)
+
+
+Monolith - 
+
+Microservices - 
+
+
+How react useEffect works 
+
+Approach 1 - Loads ---> API --- Render
+Approach 2 - Loads ---> Render ---> API ---> Re-render 
+    Much better UI experience as we render first skeleton and then after API call renders the main code
+
+
+useEffect follows Approach 2 
+
+Hooks  - Js Function (provided by React)
+
+  useEffect(() => {
+    console.log("This is use Effect callback method");
+  }, []);
+
+  the callback function of useEffect will be called as soon as the component in which it is present render , as soon as component renders useEffect cb function is executed.
+
+  --------------
+  const Body = () => {
+  const [listOfRestaurant, setListOfRestaurant] = useState(resObj);
+
+  useEffect(() => {
+    console.log("This is useEffect callback method");
+  }, []);
+
+  console.log("OutSide useEffect");
+
+  return (
+    <div className="body">
+--------------------------
+
+first outside useEffect will be logged and then This is useEffect cb method
+
+//shimmer UI
+
+till the actual data render on the UI , we should use Shimmer ui on the screen
+
+
+
+---------------------------------------------------------------------
+
+Prop Drilling
+
+A -> B -> C
+
+A -> C
+
+---------------------
+
+Context - Data which we need from anywhere in our app, we hold it in context.
+like logged user info, theme (dark or light)
+
