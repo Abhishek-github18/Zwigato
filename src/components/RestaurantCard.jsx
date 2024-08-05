@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { CDN_URL } from "../utils/constant";
 
 const RestraurantCard = (props) => {
-  console.log(props);
+  // console.log(props);
 // debugger 
   const { name, cloudinaryImageId, costForTwo, cuisines, avgRating, sla } =
     props?.resData.info;

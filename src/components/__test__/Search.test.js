@@ -37,3 +37,19 @@ test("Should search restraunt on input burger", async () => {
       expect(cardListAfterSeach.length).toBe(2);
  
 });
+
+test("Should render only top rated restaurant", async ()=>{
+    await act(async ()=> render(
+        <BrowserRouter>
+          <Body />
+        </BrowserRouter>
+      ));
+
+    const topRatedFilterBtn = screen.getByRole("button", {name: "Top Rated Restaurant"})
+
+    fireEvent.click(topRatedFilterBtn);
+
+    const cardsAfterFilter = screen.getAllByTestId("cards")
+
+    expect(cardsAfterFilter.length).toBe(17);
+})

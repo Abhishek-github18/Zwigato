@@ -6,7 +6,7 @@ import UserContext from "../utils/Usercontext";
 
 const Body = () => {
   const [listOfRestaurant, setListOfRestaurant] = useState([]);
-  const [searchText, setSearchText] = useState();
+  const [searchText, setSearchText] = useState('');
   const [restroList, setRestroList] = useState();
 
   const PromotedRestaurant = withPromotedLabel(RestraurantCard);
@@ -79,9 +79,9 @@ const Body = () => {
           style={{ marginLeft: "1rem" }}
           onClick={async () => {
             // await fetchData();
-            console.log(restroList);
+            // console.log(restroList);
             const filteredList = restroList.filter((res) => {
-              console.log(res);
+              // console.log(res);
               return res.info.name
                 .toLowerCase()
                 .includes(searchText.toLowerCase());

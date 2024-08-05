@@ -14,7 +14,7 @@ const ItemCategoryList = ({ list }) => {
   return (
     <div>
       {list.map((item) => (
-        <div key={item.card.info.id} className="flex justify-between m-4">
+        <div key={item.card.info.id} className="flex justify-between m-4" data-testid="accordianItems">
           <div className="item-details">
             <h2 className="font-bold">{item.card.info.name}</h2>
             <span className="font-bold">₹{item.card.info.price / 100}</span>
